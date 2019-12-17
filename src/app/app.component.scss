@@ -1,0 +1,116 @@
+.gift {
+    margin: auto;
+    width: 100vw !important;
+    img {
+        float: left;
+        margin: 0 auto;
+        width: 32%;
+        cursor:url('https://c7.uihere.com/icons/897/577/112/christmas-claus-santa-santa-hat-icon-ae82f97d347eb7215f49c21008973647.png'), pointer;
+    }
+    .to {
+        text-align: center;
+        float: left;
+        width: 34%;
+        color: #2b5f17;
+        font-size: 80px;
+        text-shadow: 2px 2px black;
+        margin-top: 10%;
+        margin-bottom: 7%;
+        font-family: 'Permanent Marker', cursive;
+    }
+}
+
+.intro {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    font-size: 30px;
+}
+
+.start {
+    position: absolute;
+    top: 100%;
+    left: 68%;
+    .startbutton {
+        padding: 30px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+
+.welcome {
+    text-align: center;
+    font-size: 80px;
+    color: #2b5f17;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px black;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+    top: 45%;
+    left: 35%;
+    color: lightgray;
+}
+
+h1 {
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 70%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.mat-raised-button {
+      position: absolute;
+      right: -20%;
+}
+
+.error {
+    color: white;
+}
+
+.mat-raised-button {
+    background-color: #2b5f17;
+} 
+
+::ng-deep 
+.mat-form-field-label {
+    color: white !important;
+}
+
+::ng-deep
+.mat-form-field-underline {
+    background-color: #2b5f17 !important;
+
+}
+
+::ng-deep
+.mat-form-field-ripple {
+    background-color: white !important;
+}
+
+.grattis {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    font-size: 20px;
+}
+
