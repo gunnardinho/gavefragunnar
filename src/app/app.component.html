@@ -8,10 +8,15 @@
   <div class="to">
     Til mine søsken
   </div>
-  <img
+  <div class="pic">
+    <div class="cannotopen">
+      {{time | async}}
+    </div>
+    <img
     src="https://pbs.twimg.com/profile_images/1189087338/1292194194_Gift_Box_400x400.png"
     (click)="open()"
-  />
+    />
+  </div>
   <div class="to">
     Og deres kjære
   </div>
@@ -168,7 +173,8 @@
 
 <div *ngIf="question == 6">
   <h1>
-    Skriv teksten her, noe om flyplass
+    Nå skal vi til ett sted hvor det like før årtusenskiftet ble registrert over 10
+    millioner besøkende årlig, <br> men etter 1998 ble besøkt betydelig mindre...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -190,7 +196,8 @@
 
 <div *ngIf="question == 7">
   <h1>
-    Skriv teksten her, noe om Storebrand
+    Den moderne versjonen av dette stedet ble innviet under jappetiden <br>
+    Her hadde bedriften hvor jeg er utleid til kontorer fra 1998 til 2009...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -212,7 +219,9 @@
 
 <div *ngIf="question == 8">
   <h1>
-    Skriv teksten her, noe om en ingeniørkaptein
+    Neste stopp er en gammel husmannsplass som gikk under gården Blindern,
+    forpaktet av ingeniørkaptein M.W. Sundt fra 1729-1759. <br>
+    Men han ville nok ikke kjent igjen stedet i dag...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -234,7 +243,8 @@
 
 <div *ngIf="question == 9">
   <h1>
-    Skriv teksten her, noe om navnet
+    Stedet vi nå skal til gikk under navnet fallandadalen i middelalderen, <br>
+    noe som betyr dalen med fossefallene...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -256,7 +266,9 @@
 
 <div *ngIf="question == 10">
   <h1>
-    Skriv teksten her, noe om gameshow
+    Siste stopp på denne reisen trenger du bare å gå til. <br>
+    Her vil dere få bevist at det ikke kun var flaks at dere kom dere gjennom denne quizen. <br>
+    Vi skal til ett sted som deler navn med et norsk gameshow som ble vist fra 1993 til 2011.
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">

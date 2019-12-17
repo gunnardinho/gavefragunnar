@@ -2,9 +2,8 @@
     margin: auto;
     width: 100vw !important;
     img {
-        float: left;
-        margin: 0 auto;
-        width: 32%;
+        margin-top: 15%;
+        margin-left: 10%;
         cursor:url('https://c7.uihere.com/icons/897/577/112/christmas-claus-santa-santa-hat-icon-ae82f97d347eb7215f49c21008973647.png'), pointer;
     }
     .to {
@@ -20,6 +19,33 @@
     }
 }
 
+.pic {
+    float: left;
+    width: 32%;
+    z-index: 5;
+}
+
+.cannotopen {
+    background-color: darkgray;
+    color: white;
+    z-index: 10;
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    border-style: solid;
+    border-color: #2b5f17;
+    border-width: 5px;
+    color: #2b5f17;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nova Square', cursive;
+    cursor: not-allowed;
+    border-radius: 10px;
+}
+
 .intro {
     text-align: center;
     color: lightgray;
@@ -29,6 +55,7 @@
     left: 25%;
     width: 50%;
     font-size: 30px;
+    vertical-align: middle;
 }
 
 .start {
@@ -77,15 +104,15 @@ h1 {
 .mat-raised-button {
       position: absolute;
       right: -20%;
+      background-color: #2b5f17;
+      :hover {
+          background-color: white !important;
+      }
 }
 
 .error {
     color: white;
 }
-
-.mat-raised-button {
-    background-color: #2b5f17;
-} 
 
 ::ng-deep 
 .mat-form-field-label {
@@ -102,6 +129,7 @@ h1 {
 .mat-form-field-ripple {
     background-color: white !important;
 }
+
 
 .grattis {
     text-align: center;
