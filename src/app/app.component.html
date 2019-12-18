@@ -3,16 +3,13 @@
 
 <div *ngIf="!opened" class="gift">
   <div class="welcome">
-    Gratulerer med dagen Simen!
-  </div>
-  <div class="welcome" style="text-decoration: line-through black;">
     God Jul!
   </div>
   <div class="to">
     Til mine søsken
   </div>
   <div class="pic">
-    <div class="cannotopen">
+    <div class="cannotopen" *ngIf="!isChristmas">
       {{time | async}}
     </div>
     <img
