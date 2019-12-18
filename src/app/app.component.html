@@ -53,14 +53,14 @@
   </p>
 
   <div class="start">
-    <button mat-raised-button type="button" color="primary" (click)="start()" class="startbutton">Kjør iveg!</button>
+    <button mat-raised-button type="button" color="primary" (click)="start()" class="startbutton">Kjør igang!</button>
   </div>
   </div>
 
 <div *ngIf="question == 1">
   <h1>
-    Vi skal til ett sted man kan komme både med båt og tog! <br />
-    Her finner man også Norges mest kjente spritbu..
+    Først går turen til Norges kanskje mest kjente by under 50 000 innbyggere! <br>
+    Ludvig Wiese er regnet som grunnleggeren av denne byen...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -69,7 +69,7 @@
         mat-raised-button
         type="submit"
         color="primary"
-        (click)="onSubmit(task1.value, ['Moelv', 'Moelven'])"
+        (click)="onSubmit(task1.value, ['Lillehammer'])"
       >
         Send svar
       </button>
@@ -174,7 +174,7 @@
 <div *ngIf="question == 6">
   <h1>
     Nå skal vi til ett sted hvor det like før årtusenskiftet ble registrert over 10
-    millioner besøkende årlig, <br> men etter 1998 ble besøkt betydelig mindre...
+    millioner besøkende årlig, <br> men som etter 1998 ble besøkt betydelig mindre...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -268,7 +268,8 @@
   <h1>
     Siste stopp på denne reisen trenger du bare å gå til. <br>
     Her vil dere få bevist at det ikke kun var flaks at dere kom dere gjennom denne quizen. <br>
-    Vi skal til ett sted som deler navn med et norsk gameshow som ble vist fra 1993 til 2011.
+    Vi skal til ett sted som deler navn med et norsk gameshow som ble vist fra 1993 til 2011. <br>
+    Svaret kan også være ett tresidet trapesoeder...
   </h1>
   <form class="example-form" onsubmit="return false">
     <mat-form-field class="example-full-width">
@@ -277,7 +278,7 @@
         type="submit"
         mat-raised-button
         color="accent"
-        (click)="onSubmit(task10.value, ['Fangene på fortet', 'The cube', 'Kuben'])"
+        (click)="onSubmit(task10.value, ['Fangene på fortet', 'The Cube', 'Kuben', 'Kube'])"
       >
         Send svar
       </button>
@@ -309,6 +310,6 @@
 
   <p>
     Dersom vi avtaler en tid og noen (u)heldige ikke får til å være med grunnet vakt av <i>sønn/datter/hund</i> 
-    eller andre mindre godkjente grunner så skal vi se om vi får til å finne på noe annet!
+    eller andre mindre godkjente grunner så skal vi se om vi får til å finne på noe annet med vedkommende!
   </p>
 </div>
