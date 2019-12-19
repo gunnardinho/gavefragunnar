@@ -1,0 +1,144 @@
+.gift {
+    margin: auto;
+    width: 100vw !important;
+    img {
+        margin-top: 15%;
+        margin-left: 10%;
+        cursor:url('https://c7.uihere.com/icons/897/577/112/christmas-claus-santa-santa-hat-icon-ae82f97d347eb7215f49c21008973647.png'), pointer;
+    }
+    .to {
+        text-align: center;
+        float: left;
+        width: 34%;
+        color: #2b5f17;
+        font-size: 80px;
+        text-shadow: 2px 2px black;
+        margin-top: 10%;
+        margin-bottom: 7%;
+        font-family: 'Permanent Marker', cursive;
+    }
+}
+
+.pic {
+    float: left;
+    width: 32%;
+    z-index: 5;
+}
+
+
+.choices {
+    display: flex;
+}
+
+.box {
+    float: left;
+    width: 50%;
+    overflow: auto;
+    text-align: left;
+    img {
+        height: 300px;
+    }
+}
+
+a {
+    color: blanchedalmond;
+}
+
+
+.cannotopen {
+    background-color: darkgray;
+    color: white;
+    z-index: 10;
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    border-style: solid;
+    border-color: #2b5f17;
+    border-width: 5px;
+    color: #2b5f17;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nova Square', cursive;
+    cursor: not-allowed;
+    border-radius: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.start {
+    position: absolute;
+    top: 100%;
+    left: 68%;
+    .startbutton {
+        padding: 30px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+
+.welcome {
+    text-align: center;
+    font-size: 80px;
+    color: #2b5f17;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px black;
+}
+
+
+h1 {
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 70%;
+}
+
+
+
+.error {
+    color: white;
+}
+
+::ng-deep 
+.mat-form-field-label {
+    color: white !important;
+}
+
+::ng-deep
+.mat-form-field-underline {
+    background-color: #2b5f17 !important;
+
+}
+
+::ng-deep
+.mat-form-field-ripple {
+    background-color: white !important;
+}
+
+
+.grattis {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    font-size: 20px;
+}
+
