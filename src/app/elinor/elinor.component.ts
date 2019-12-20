@@ -11,7 +11,7 @@ import * as moment from 'moment';
 export class ElinorComponent implements OnInit {
   title = 'ChristmasElinor';
 
-  public opened: boolean = true;
+  public opened: boolean;
 
   private days: number;
   private hours: number;

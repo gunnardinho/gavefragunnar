@@ -5,10 +5,10 @@ import { MatFormFieldModule, MatInputModule, MatButtonModule } from '@angular/ma
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElinorComponent } from './elinor/elinor.component';
+import { SiblingsComponent } from './siblings/siblings.component';
 
 import { RouterModule } from '@angular/router';
-import appRoutes from './routerConfig';
-import { SiblingsComponent } from './siblings/siblings.component';
+import { appRoutes } from './routerConfig';
 
 @NgModule({
   declarations: [
