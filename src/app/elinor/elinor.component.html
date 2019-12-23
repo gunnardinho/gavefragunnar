@@ -1,10 +1,16 @@
-<div *ngIf="!opened" class="gift">
+<div *ngIf=!opened>
+  <mat-grid-list cols="3" rowHeight = "10vh">
+    <mat-grid-tile [colspan] = "3" [rowspan]="2">
         <div class="welcome">
           God Jul!
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="to">
-          Til min kjære
+          Til mine kjære
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="pic">
           <div class="cannotopen" *ngIf="!isChristmas">
             {{time | async}}
@@ -14,76 +20,94 @@
           (click)="open()"
           />
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="to">
-            husvert Elinor
+          husvert Elinor
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "3" [rowspan]="2">
         <div class="welcome">
           Hilsen Gunnarnissen
         </div>
-      </div>
-      
-      
-      <div *ngIf="opened" class="grattis">
-        <p>
-          God Jul Elinor!
-        </p>
-      
-        <p>    
-            Selv om jeg har dratt bort i jula så legger jeg igjen en liten hilsen her!
-        </p>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
-        <p>
-          Til jul så har du vært så heldig å få gavekort på ett valgfritt show på nyåret. <br>
-          Det kan være <i>Teater/Musical/Opera/Standup/Konsert</i> eller hva enn du vil, kun fantasien setter grenser!
-        </p>
-      
-        <p>
-            Jeg gleder meg veldig ihvertfall, så får du pønske på hva du kunne tenke deg til vi sees igjen! <br>
-            Nedenfor finnes litt inspirasjon og noen knakende gode alternativ:
-        </p>
-      
-        <div class="container">
-            <div class="box">
-                <img src="https://www.oslospektrum.no/getfile.php/4433041.297.bjabizsmbj7bmt/2000x2000Carmina+Burana_websak.jpg" alt="">
-            </div>
-            <div class="box">
-                <p>
-                    <a href="https://www.oslospektrum.no/halvdan-sivertsen-70-aar-festkonsert-med-kork-og-venner.6251853-133570.html">
-                        Halvdan Sivertsen 70 år
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.oslospektrum.no/oslo-filharmonien-100-aar-carmina-burana.6211228-133570.html">
-                        Oslo filharmonien 100 år
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.oslospektrum.no/ricky-gervais.6265287-133570.html">
-                        Ricky Gervais
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.oslospektrum.no/bryan-adams.6242250-133570.html">
-                        Bryan Adams
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.showpakker.no/oslo/show/musikalen-optimist-paa-chateau-neuf/">
-                        Musikalen Optimist
-                    </a>
-                </p>
-                <p>
-                    <a href="https://oslonye.no/sa-som-i-himmelen/">
-                        Så som i himmelen
-                    </a>
-                </p>
-                <br> <br> <br>
+<div *ngIf="opened" class="grattis">
+  <p>
+    God Jul Elinor!
+  </p>
 
-            </div>
-        </div>
-      
-        <div class="bottom">
-          Ha en fortsatt gledelig jul, og vit at jeg er veldig takknemlig for at jeg får bo hos deg! 
-        </div>
-      </div>
-      
+  <p>
+    Selv om jeg har dratt bort i jula så legger jeg igjen en liten hilsen her!
+  </p>
+
+  <p>
+    Til jul så har du vært så heldig å få gavekort på ett valgfritt show på
+    nyåret. <br />
+    Det kan være <i>Teater/Musical/Opera/Standup/Konsert</i> eller hva enn du
+    vil, kun fantasien setter grenser!
+  </p>
+
+  <p>
+    Jeg gleder meg veldig ihvertfall, så får du pønske på hva du kunne tenke deg
+    til vi sees igjen! <br />
+    Nedenfor finnes litt inspirasjon og noen knakende gode alternativ:
+  </p>
+
+  <div class="container">
+    <div class="box">
+      <img
+        src="https://www.oslospektrum.no/getfile.php/4433041.297.bjabizsmbj7bmt/2000x2000Carmina+Burana_websak.jpg"
+        alt=""
+      />
+    </div>
+    <div class="box">
+      <p>
+        <a
+          href="https://www.oslospektrum.no/halvdan-sivertsen-70-aar-festkonsert-med-kork-og-venner.6251853-133570.html"
+        >
+          Halvdan Sivertsen 70 år
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://www.oslospektrum.no/oslo-filharmonien-100-aar-carmina-burana.6211228-133570.html"
+        >
+          Oslo filharmonien 100 år
+        </a>
+      </p>
+      <p>
+        <a href="https://www.oslospektrum.no/ricky-gervais.6265287-133570.html">
+          Ricky Gervais
+        </a>
+      </p>
+      <p>
+        <a href="https://www.oslospektrum.no/bryan-adams.6242250-133570.html">
+          Bryan Adams
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://www.showpakker.no/oslo/show/musikalen-optimist-paa-chateau-neuf/"
+        >
+          Musikalen Optimist
+        </a>
+      </p>
+      <p>
+        <a href="https://oslonye.no/sa-som-i-himmelen/">
+          Så som i himmelen
+        </a>
+      </p>
+      <br />
+      <br />
+      <br />
+    </div>
+  </div>
+
+  <div class="bottom">
+    Ha en fortsatt gledelig jul, og vit at jeg er veldig takknemlig for at jeg
+    får bo hos deg!
+  </div>
+</div>

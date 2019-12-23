@@ -1,13 +1,16 @@
-
-
-
-<div *ngIf="!opened" class="gift">
+<div *ngIf=!opened>
+  <mat-grid-list cols="3" rowHeight = "10vh">
+    <mat-grid-tile [colspan] = "3" [rowspan]="2">
         <div class="welcome">
           God Jul!
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="to">
           Til mine søsken
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="pic">
           <div class="cannotopen" *ngIf="!isChristmas">
             {{time | async}}
@@ -17,300 +20,305 @@
           (click)="open()"
           />
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "1" [rowspan]="6">
         <div class="to">
           Og deres kjære
         </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = "3" [rowspan]="2">
         <div class="welcome">
           Hilsen Gunnarnissen
         </div>
-      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
       
-      <div *ngIf="opened && question == 0" class="intro">
-        <p>
-          Dere trodde det var så enkelt som å bare trykke på en knapp for å komme til
-          gaven gjorde dere?
-        </p>
-        
-        <p>
-          Ånei, slik er det ikke, denne gaven her blir bare gitt ut
-          om dere gjør dere fortjent til det!
-        </p>
-        
-        <p>
-          For å finne gaven må dere følge mine
-          fotspor på reise gjennom dette ganske land, fra Biri til stedet hvor gaven har gjemt seg.
-        </p>
-        
-        <p>
-          Men husk, jeg har ikke bil, så jeg
-          er avhengig av kollektiv transport for å komme meg rundt...
-        </p>
-      
-        <p>
-      
-          Hva venter dere på? <br>
-          Kom i gang med jakten nå!
-        </p>
-      
-        <div class="start">
-          <button mat-raised-button type="button" color="primary" (click)="start()" class="startbutton">Kjør igang!</button>
-        </div>
-        </div>
-      
-      <div *ngIf="question == 1">
-        <h1>
-          Først går turen til Norges kanskje mest kjente by under 50 000 innbyggere! <br>
-          Ludvig Wiese er regnet som grunnleggeren av denne byen...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 1" #task1 autocomplete="off" />
-            <button
-              mat-raised-button
-              type="submit"
-              color="primary"
-              (click)="onSubmit(task1.value, ['Lillehammer'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 2">
-        <h1>
-          Vi skal til stedet i Norge hvor flest biler passerer per dag <br />
-          Det er stedet med de lyse åkrene..
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 2" #task2 autocomplete="off" />
-            <button
-              mat-raised-button
-              type="submit"
-              (click)="onSubmit(task2.value, ['Lysaker'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 3">
-        <h1>
-          Vi skal videre til ett sted som har ett navn bestående av tre ord som betyr
-          nesten nøyaktig det samme...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 3" #task3 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task3.value, ['Nesoddtangen'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 4">
-        <h1>
-          Nå skal vi til ett sted som virkelig har skutt seg inn i Norgeshistorien
-          <br />
-          Dette er stedet med de drøye bakker...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 4" #task4 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task4.value, ['Drøbak'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 5">
-        <h1>
-          Videre skal vi til en stad julenissen nok ikke kommer til å besøke...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 5" #task5 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task5.value, ['Slemmestad'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 6">
-        <h1>
-          Nå skal vi til ett sted hvor det like før årtusenskiftet ble registrert over 10
-          millioner besøkende årlig, <br> men som etter 1998 ble besøkt betydelig mindre...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 6" #task6 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task6.value, ['Fornebu'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 7">
-        <h1>
-          Den moderne versjonen av dette stedet ble innviet under jappetiden <br>
-          Her hadde bedriften hvor jeg er utleid til kontorer fra 1998 til 2009...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 7" #task7 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task7.value, ['Aker brygge', 'Akerbrygge'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 8">
-        <h1>
-          Neste stopp er en gammel husmannsplass som gikk under gården Blindern,
-          forpaktet av ingeniørkaptein M.W. Sundt fra 1729-1759. <br>
-          Men han ville nok ikke kjent igjen stedet i dag...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 8" #task8 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task8.value, ['Majorstuen','Majorstua'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 9">
-        <h1>
-          Stedet vi nå skal til gikk under navnet fallandadalen i middelalderen, <br>
-          noe som betyr dalen med fossefallene...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 9" #task9 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task9.value, ['Nydalen'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="question == 10">
-        <h1>
-          Siste stopp på denne reisen trenger du bare å gå til. <br>
-          Her vil dere få bevist at det ikke kun var flaks at dere kom dere gjennom denne quizen. <br>
-          Vi skal til ett sted som deler navn med et norsk gameshow som ble vist fra 1993 til 2011. <br>
-          Svaret kan også være ett tresidet trapesoeder...
-        </h1>
-        <form class="example-form" onsubmit="return false">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Oppgave 10" #task10 autocomplete="off" />
-            <button
-              type="submit"
-              mat-raised-button
-              color="accent"
-              (click)="onSubmit(task10.value, ['Fangene på fortet', 'The Cube', 'Kuben', 'Kube'])"
-            >
-              Send svar
-            </button>
-          </mat-form-field>
-          <div *ngIf="error" class="error">
-            {{ errorMessage }}
-          </div>
-        </form>
-      </div>
-      
-      <div *ngIf="finished" class="grattis">
-        <p>
-          Hurra! Dere har endelig kommet dere i mål på Nydalen!
-        </p>
-      
-        <p>
-          Siden jeg endelig er i Oslo sammen med dere alle, og dere tydeligvis er veldig gode til å knekke koder: <br>
-          Er årets julegave fra meg til dere en felles søskensamling med deres <i>kone/mann/kjæreste</i> til <br>
-          The Cube som er en opplevelse hos Fangene på Fortet.
-        </p>
-      
-        <p>
-          Nedenfor er en liten video som forklarer konseptet.
-        </p>
-      
-        <div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/7nk4QrlU9SQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      
-        <p>
-          Dersom vi avtaler en tid og noen (u)heldige ikke får til å være med grunnet vakt av <i>sønn/datter/hund</i> 
-          eller andre mindre godkjente grunner så skal vi se om vi får til å finne på noe annet med vedkommende!
-        </p>
-      </div>
-      
+<div *ngIf="opened && question == 0" class="intro">
+  <p>
+    Dere trodde det var så enkelt som å bare trykke på en knapp for å komme til
+    gaven gjorde dere?
+  </p>
+  
+  <p>
+    Ånei, slik er det ikke, denne gaven her blir bare gitt ut
+    om dere gjør dere fortjent til det!
+  </p>
+  
+  <p>
+    For å finne gaven må dere følge mine
+    fotspor på reise gjennom dette ganske land, fra Biri til stedet hvor gaven har gjemt seg.
+  </p>
+  
+  <p>
+    Men husk, jeg har ikke bil, så jeg
+    er avhengig av kollektiv transport for å komme meg rundt...
+  </p>
+
+  <p>
+
+    Hva venter dere på? <br>
+    Kom i gang med jakten nå!
+  </p>
+
+  <div class="start">
+    <button mat-raised-button type="button" color="primary" (click)="start()" class="startbutton">Kjør igang!</button>
+  </div>
+  </div>
+
+<div *ngIf="question == 1">
+  <h1>
+    Først går turen til Norges kanskje mest kjente by under 50 000 innbyggere! <br>
+    Ludvig Wiese er regnet som grunnleggeren av denne byen...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 1" #task1 autocomplete="off" />
+      <button
+        mat-raised-button
+        type="submit"
+        color="primary"
+        (click)="onSubmit(task1.value, ['Lillehammer'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 2">
+  <h1>
+    Vi skal til stedet i Norge hvor flest biler passerer per dag <br />
+    Det er stedet med de lyse åkrene..
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 2" #task2 autocomplete="off" />
+      <button
+        mat-raised-button
+        type="submit"
+        (click)="onSubmit(task2.value, ['Lysaker'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 3">
+  <h1>
+    Vi skal videre til ett sted som har ett navn bestående av tre ord som betyr
+    nesten nøyaktig det samme...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 3" #task3 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task3.value, ['Nesoddtangen'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 4">
+  <h1>
+    Nå skal vi til ett sted som virkelig har skutt seg inn i Norgeshistorien
+    <br />
+    Dette er stedet med de drøye bakker...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 4" #task4 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task4.value, ['Drøbak'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 5">
+  <h1>
+    Videre skal vi til en stad julenissen nok ikke kommer til å besøke...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 5" #task5 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task5.value, ['Slemmestad'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 6">
+  <h1>
+    Nå skal vi til ett sted hvor det like før årtusenskiftet ble registrert over 10
+    millioner besøkende årlig, <br> men som etter 1998 ble besøkt betydelig mindre...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 6" #task6 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task6.value, ['Fornebu'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 7">
+  <h1>
+    Den moderne versjonen av dette stedet ble innviet under jappetiden <br>
+    Her hadde bedriften hvor jeg er utleid til kontorer fra 1998 til 2009...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 7" #task7 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task7.value, ['Aker brygge', 'Akerbrygge'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 8">
+  <h1>
+    Neste stopp er en gammel husmannsplass som gikk under gården Blindern,
+    forpaktet av ingeniørkaptein M.W. Sundt fra 1729-1759. <br>
+    Men han ville nok ikke kjent igjen stedet i dag...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 8" #task8 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task8.value, ['Majorstuen','Majorstua'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 9">
+  <h1>
+    Stedet vi nå skal til gikk under navnet fallandadalen i middelalderen, <br>
+    noe som betyr dalen med fossefallene...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 9" #task9 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task9.value, ['Nydalen'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="question == 10">
+  <h1>
+    Siste stopp på denne reisen trenger du bare å gå til. <br>
+    Her vil dere få bevist at det ikke kun var flaks at dere kom dere gjennom denne quizen. <br>
+    Vi skal til ett sted som deler navn med et norsk gameshow som ble vist fra 1993 til 2011. <br>
+    Svaret kan også være ett tresidet trapesoeder...
+  </h1>
+  <form class="example-form" onsubmit="return false">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Oppgave 10" #task10 autocomplete="off" />
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        (click)="onSubmit(task10.value, ['Fangene på fortet', 'The Cube', 'Kuben', 'Kube'])"
+      >
+        Send svar
+      </button>
+    </mat-form-field>
+    <div *ngIf="error" class="error">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="finished" class="grattis">
+  <p>
+    Hurra! Dere har endelig kommet dere i mål på Nydalen!
+  </p>
+
+  <p>
+    Siden jeg endelig er i Oslo sammen med dere alle, og dere tydeligvis er veldig gode til å knekke koder: <br>
+    Er årets julegave fra meg til dere en felles søskensamling med deres <i>kone/mann/kjæreste</i> til <br>
+    The Cube som er en opplevelse hos Fangene på Fortet.
+  </p>
+
+  <p>
+    Nedenfor er en liten video som forklarer konseptet.
+  </p>
+
+  <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7nk4QrlU9SQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <p>
+    Dersom vi avtaler en tid og noen (u)heldige ikke får til å være med grunnet vakt av <i>sønn/datter/hund</i> 
+    eller andre mindre godkjente grunner så skal vi se om vi får til å finne på noe annet med vedkommende!
+  </p>
+</div>

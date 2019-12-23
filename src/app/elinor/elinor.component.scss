@@ -1,6 +1,32 @@
-.gift {
-    margin: auto;
-    width: 100vw !important;
+mat-grid-tile {
+    .welcome {
+        text-align: center;
+        font-size: 80px;
+        color: #2b5f17;
+        font-family: 'Lobster', cursive;
+        text-shadow: 2px 2px black;
+    }
+    .pic {
+        width: 100%;
+    }
+    .cannotopen {
+        background-color: darkgray;
+        width: 95%;
+        position: absolute;
+        top: 40%;
+        height: 20%;
+        border-style: solid;
+        border-color: #2b5f17;
+        border-width: 5px;
+        color: #2b5f17;
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Nova Square', cursive;
+        cursor: not-allowed;
+        border-radius: 10px;
+    }
     img {
         margin-top: 15%;
         margin-left: 10%;
@@ -8,21 +34,11 @@
     }
     .to {
         text-align: center;
-        float: left;
-        width: 34%;
         color: #2b5f17;
         font-size: 80px;
         text-shadow: 2px 2px black;
-        margin-top: 10%;
-        margin-bottom: 7%;
         font-family: 'Permanent Marker', cursive;
     }
-}
-
-.pic {
-    float: left;
-    width: 32%;
-    z-index: 5;
 }
 
 
@@ -44,27 +60,6 @@ a {
     color: blanchedalmond;
 }
 
-
-.cannotopen {
-    background-color: darkgray;
-    color: white;
-    z-index: 10;
-    width: 30%;
-    position: absolute;
-    top: 40%;
-    height: 20%;
-    border-style: solid;
-    border-color: #2b5f17;
-    border-width: 5px;
-    color: #2b5f17;
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Nova Square', cursive;
-    cursor: not-allowed;
-    border-radius: 10px;
-}
 
 .intro {
     text-align: center;
@@ -90,15 +85,6 @@ a {
 }
 
 
-.welcome {
-    text-align: center;
-    font-size: 80px;
-    color: #2b5f17;
-    font-family: 'Lobster', cursive;
-    text-shadow: 2px 2px black;
-}
-
-
 h1 {
     color: lightgray;
     font-family: 'Ubuntu', sans-serif;
@@ -107,8 +93,6 @@ h1 {
     left: 10%;
     width: 70%;
 }
-
-
 
 .error {
     color: white;
