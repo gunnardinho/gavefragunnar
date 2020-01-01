@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElinorComponent } from './elinor/elinor.component';
 import { SiblingsComponent } from './siblings/siblings.component';
+import { KennethComponent } from './kenneth/kenneth.component';
 
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routerConfig';
@@ -14,7 +15,8 @@ import { appRoutes } from './routerConfig';
   declarations: [
     AppComponent,
     ElinorComponent,
-    SiblingsComponent
+    SiblingsComponent,
+    KennethComponent
   ],
   imports: [
     BrowserModule,

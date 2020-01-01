@@ -1,0 +1,75 @@
+<div *ngIf=!opened>
+    <mat-grid-list cols="3" rowHeight = "10vh">
+      <mat-grid-tile [colspan] = "3" [rowspan]="2">
+          <div class="welcome">
+            Gratulerer med dagen!
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan] = "1" [rowspan]="6">
+          <div class="to">
+            Til <br> Kenneth
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan] = "1" [rowspan]="6">
+          <div class="pic">
+            <div class="cannotopen" *ngIf="!isChristmas">
+              {{time | async}}
+            </div>
+            <img
+            src="https://pbs.twimg.com/profile_images/1189087338/1292194194_Gift_Box_400x400.png"
+            (click)="open()"
+            />
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan] = "1" [rowspan]="6">
+          <div class="to">
+            Hilsen Gunnar
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan] = "3" [rowspan]="2">
+          <div class="welcome">
+            Hurra for deg!
+          </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+  <div *ngIf="opened" class="grattis">
+
+
+    <h2>
+        Gratulerer så mye Kenneth!
+    </h2>
+    
+    <p>
+        
+    </p>
+  
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://media-cdn.tripadvisor.com/media/photo-s/10/47/04/4c/vr-game-xortex.jpg"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        
+<br>
+
+        <p>
+            Senere i januar kommer VR-spillet Raw Shooter til Oslo, og dit skal vi, så fort det er mulig!
+        </p>
+
+        <p>
+            Før eller etter at vi har tatt en liten matbit på en sjappe like ved siden av! 
+        </p>
+
+        <p>
+            Ha en fortsatt fin bursdag!
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+  

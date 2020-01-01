@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ElinorComponent } from './elinor/elinor.component';
 import { SiblingsComponent } from './siblings/siblings.component';
+import { KennethComponent } from './kenneth/kenneth.component';
 
 export const appRoutes: Routes = [
     {
@@ -10,5 +11,9 @@ export const appRoutes: Routes = [
     {
         path: 'siblings',
         component: SiblingsComponent
+    },
+    {
+        path: 'kenneth',
+        component: KennethComponent
     }
 ];

@@ -1,0 +1,134 @@
+mat-grid-tile {
+    .welcome {
+        text-align: center;
+        font-size: 80px;
+        color: #8a132d;
+        font-family: 'Crimson Text', serif;
+        font-weight: 700;
+        text-shadow: 2px 2px black;
+    }
+    .pic {
+        width: 100%;
+    }
+    .cannotopen {
+        background-color: rgb(191, 209, 216);
+        width: 95%;
+        position: absolute;
+        top: 40%;
+        height: 20%;
+        border-style: solid;
+        border-color: #8a132d;
+        border-width: 5px;
+        color: #8a132d;
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Nova Square', cursive;
+        cursor: not-allowed;
+        border-radius: 10px;
+    }
+    img {
+        margin-top: 15%;
+        margin-left: 10%;
+        cursor:url('https://cdn0.iconfinder.com/data/icons/mardi-gras-basic-lineal-color/512/49_Horn-128.png'), pointer;
+    }
+    .to {
+        text-align: center;
+        color: #8a132d;
+        font-size: 80px;
+        text-shadow: 2px 2px black;
+        font-family: 'Permanent Marker', cursive;
+    }
+}
+
+h2 {
+    font-size: 70px;
+    padding-bottom: 50px;
+}
+
+
+.choices {
+    display: flex;
+}
+
+.box {
+    float: left;
+    width: 45%;
+    overflow: auto;
+    text-align: center;
+    img {
+        height: 250px;
+    }
+}
+
+a {
+    color: blanchedalmond;
+}
+
+
+.intro {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.start {
+    position: absolute;
+    top: 100%;
+    left: 68%;
+    .startbutton {
+        padding: 30px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+
+h1 {
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 70%;
+}
+
+.error {
+    color: white;
+}
+
+::ng-deep 
+.mat-form-field-label {
+    color: white !important;
+}
+
+::ng-deep
+.mat-form-field-underline {
+    background-color: #2b5f17 !important;
+
+}
+
+::ng-deep
+.mat-form-field-ripple {
+    background-color: white !important;
+}
+
+
+.grattis {
+    text-align: center;
+    color: lightgray;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    font-size: 20px;
+}
+
